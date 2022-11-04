@@ -1,0 +1,119 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    /* basic color palette */
+    --white-1: hsl(0, 0%, 100%);
+    --black-1: hsl(0, 0%, 0%);
+    --black-2: hsl(0, 0%, 50%);
+    --red-1: hsl(0, 50%, 0%);
+    --red-2: hsl(0deg 30% 90%);
+    /* fonts */
+    --ft-fy-fallback-1: sans-serif;
+    --ft-fy-1: "Poppins", var(--ft-fy-fallback-1);
+    --ft-se-400: 1.05rem;
+    --ft-se-500: 2rem;
+    --ft-se-600: 4rem;
+  }
+.page {
+    --__title_ft-se: clamp(var(--ft-se-500), 15vw, var(--ft-se-600));
+    color: var(--black-1);
+    display: grid;
+    font-family: var(--ft-fy-1);
+    font-size: var(--ft-se-400);
+    min-height: 48vh;
+    place-items: center;
+  }
+  .title {
+    color: var(--__title_cr, var(--black-1));
+    font-family: var(--__title_ft-fy, var(--ft-fy-1));
+    font-size: var(--__title_ft-se, var(--ft-se-500));
+    position: relative;
+  }
+  .title::before {
+    color: var(--__title__bef_cr, var(--red-2));
+    width: var(--__title__bef_wh, 45%);
+    position: absolute;
+    content: attr(data-text);
+    overflow: hidden;
+    border-right: 2px solid;
+    white-space: nowrap;
+    animation: anim 8s linear infinite;
+  }
+  @keyframes anim {
+    0%, 10%, 100% {
+      width: 0%;
+      color: var(--red-1);
+    }
+    40%, 90% {
+      width: 100%;
+      color: var(--red-2);
+    }
+  }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.container{
+  position: absolute;
+  margin: 20px 20px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  background: rgb(179, 10, 194);
+  border-radius: 5px;
+  box-shadow: rgb(85, 16, 165) 0px 20px 30px -10px;
+}
+
+.container form input{
+    border-radius: 5px;
+    margin: 2px 2px;
+    padding: 2px 8px;
+}
+
+#name{
+  margin: 0px 7px;
+}
+
+#result{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 180px 4px;
+    padding: 23px 0px;
+    font-size: 34px;
+    font-family: monospace;
+    color: white;
+}
+
+button{
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  background: rgb(128, 24, 226);
+  display: block;
+  margin-top: 10%;
+  cursor: pointer;
+}
