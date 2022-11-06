@@ -13,18 +13,18 @@
         <h1 class="title" data-text="BMI Calculator">BMI Calculator</h1>
         </div>
     <div class="container">
-        <form onsubmit="bmi(); return false " id="form">
+        <form id="form">
             <label for="name">Name: </label>
-            <input type="text" name="name" id="name"><br>
+            <input type="text" name="name" id="name"><span id="name-error"></span><br>
             <br>
             <label for="height">Height: </label>
-            <input type="number" name="height" id="height"><label for="kilometers"> cm</label><br>
+            <input type="number" name="height" id="height"><label for="kilometers"> cm</label><br><span id="height_error"></span><br>
             <br>
             <label for="weight">Weight: </label>
-            <input type="number" name="weight" id="weight"><label for="kilometers"> Km</label><br>
+            <input type="number" name="weight" id="weight"><label for="kilometers"> Km</label><br><span id="weight_error"></span><br>
             <br>
-            <button onclick="">Calculate</button>
         </form>
+        <button onclick="bmi(); return false">Calculate</button>
         
     </div>
     <h1 id="result"></h1>

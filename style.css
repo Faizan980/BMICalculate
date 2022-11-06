@@ -76,7 +76,7 @@ html {
 
 .container{
   position: absolute;
-  margin: 20px 20px;
+  margin: 37px 0px;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -93,7 +93,10 @@ html {
 }
 
 #name{
-  margin: 0px 7px;
+  margin: 10px 6px;
+}
+span{
+  color: white;
 }
 
 #result{
