@@ -1,10 +1,11 @@
 
         function bmi(){
-            const name = document.querySelector('#name').value;
+            const name = document.querySelector('#name').value; // To get values from the user
             const height = document.querySelector('#height').value;
             const weight = document.querySelector('#weight').value;
             let height_status=false, weight_status=false;
-
+                
+            // To show error message
             if(height === '' || isNaN(height) || (height <= 0)){
                 document.getElementById('height_error').innerHTML = 'Please provide a valid height';
             }else{
@@ -18,7 +19,7 @@
                 document.getElementById('weight_error').innerHTML = '';
                 weight_status=true;
             }
-
+                // to get results
             if(height_status && weight_status){
                 const bmi = (weight / ((height*height)/10000)).toFixed(2);
 
